@@ -7,13 +7,8 @@ public class Bottle {
 
     public void open() {
         bottleWater.degas();
-//        bottleWater.closeness=false;
     }
 
-    public Bottle(double bottleVolume) {
-        this.bottleVolume = bottleVolume;
-        this.bottleWater = new SparklingWater(bottleVolume);
-    }
 
     public Bottle(double bottleVolume, String gas) {
         this.bottleVolume = bottleVolume;
