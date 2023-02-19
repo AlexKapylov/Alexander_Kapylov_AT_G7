@@ -2,9 +2,9 @@ package bubbles;
 
 public abstract class Water {
 
-    String color;
-    String transparency;
-    String smell;
-    double temperature;
+    private String color;
+    private String transparency;
+    private String smell;
+    private double temperature;
 
 }
