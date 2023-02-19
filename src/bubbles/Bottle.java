@@ -2,8 +2,8 @@ package bubbles;
 
 public class Bottle {
 
-    double bottleVolume;
-    SparklingWater bottleWater;
+    private double bottleVolume;
+    private SparklingWater bottleWater;
 
     public void open() {
         bottleWater.degas();
