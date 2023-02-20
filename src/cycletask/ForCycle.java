@@ -2,7 +2,7 @@ package cycletask;
 
 public class ForCycle {
 
-    public void forNumbers() {
+    public void showNumbers() {
         int i;
         for (i = 3; i <= 19; i++) {
             if (i % 2 != 0) {

@@ -3,9 +3,9 @@ package cycletask;
 public class CycleTaskRunner {
     public static void main(String[] args) {
         System.out.println("------------------WhileCycle---------------------");
-        new WhileCycle().whileNumbers();
+        new WhileCycle().showNumbers();
         System.out.println("------------------ForCycle---------------------");
-        new ForCycle().forNumbers();
+        new ForCycle().showNumbers();
         System.out.println("------------------Creation + ShowArrayItems---------------------");
         TrainArray ta = new TrainArray();
         ta.startRandom();
