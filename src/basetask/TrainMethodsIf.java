@@ -2,49 +2,49 @@ package basetask;
 
 public class TrainMethodsIf {
 
-    public int returnNewInt(int x) {
-        if (x < 8) {
-            return x * 7;
+    public int returnNewInt(int varInt) {
+        if (varInt < 8) {
+            return varInt * 7;
         }
-        return x / 4;
+        return varInt / 4;
     }
 
-    public long returnNewLong(long x) {
-        if (x > 300) {
-            return x - 300;
+    public long returnNewLong(long varLong) {
+        if (varLong > 300) {
+            return varLong - 300;
         }
-        return x + 20;
+        return varLong + 20;
     }
 
-    public String returnNewChar(char x) {
-        if (x == 'g') {
+    public String returnNewChar(char varChar) {
+        if (varChar == 'g') {
             return "go";
         }
-        return "o" + x;
+        return "o" + varChar;
     }
 
-    public float returnNewFloat(float x) {
-        if (x == 0.67F) {
-            return x;
+    public float returnNewFloat(float varFloat) {
+        if (varFloat == 0.67F) {
+            return varFloat;
         }
-        return x * 2;
+        return varFloat * 2;
     }
 
-    public double returnNewDouble(double x) {
-        if (x > 30 && x < 80) {
-            return x + 87;
+    public double returnNewDouble(double varDouble) {
+        if (varDouble > 30 && varDouble < 80) {
+            return varDouble + 87;
         }
-        if (x > 80 && x < 400) {
-            return x - 87;
+        if (varDouble > 80 && varDouble < 400) {
+            return varDouble - 87;
         }
-        if (x > 400) {
-            return x / 4;
+        if (varDouble > 400) {
+            return varDouble / 4;
         }
-        return x;
+        return varDouble;
     }
 
-    public void returnNewBoolean(boolean x) {
-        if (x == true) {
+    public void returnNewBoolean(boolean varBoolean) {
+        if (varBoolean) {
             System.out.println("Я получил на вход значение истины");
         } else {
             System.out.println("Я получил на вход ложь");

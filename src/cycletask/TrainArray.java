@@ -15,10 +15,6 @@ public class TrainArray {
     }
 
     public void showItems() {
-//    for (int i : arr) {
-//        System.out.print(i+" ");
-//    }
-//    System.out.println("");
         System.out.println(Arrays.toString(arr));
     }
 

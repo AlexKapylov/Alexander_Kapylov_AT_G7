@@ -6,8 +6,8 @@ public class TrainMethodsPrimitive {
         System.out.println("я получил на вход число " + numb);
     }
 
-    public void printLong(long lnumb) {
-        System.out.println("я получил на вход  длинное число " + lnumb);
+    public void printLong(long lNumb) {
+        System.out.println("я получил на вход  длинное число " + lNumb);
     }
 
     public void printChar(char ch) {

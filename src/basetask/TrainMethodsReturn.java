@@ -2,38 +2,38 @@ package basetask;
 
 public class TrainMethodsReturn {
 
-    public int returnNewInt(int x) {
-        return x * 3;
+    public int returnNewInt(int varInt) {
+        return varInt * 3;
     }
 
-    public long returnNewLong(long x) {
-        return x - 4;
+    public long returnNewLong(long varLong) {
+        return varLong - 4;
     }
 
-    public String returnNewChar(char x) {
-        return String.valueOf(x) + x;
+    public String returnNewChar(char varChar) {
+        return String.valueOf(varChar) + varChar;
     }
 
-    public float returnNewFloat(float x) {
-        return x / 2;
+    public float returnNewFloat(float varFloat) {
+        return varFloat / 2;
     }
 
-    public double returnNewDouble(double x) {
-        return x + 8;
+    public double returnNewDouble(double varDouble) {
+        return varDouble + 8;
     }
 
-    public short returnNewShort(short x) {
-        x = (short) (x - 1);
-        return x;
+    public short returnNewShort(short varShort) {
+        varShort = (short) (varShort - 1);
+        return varShort;
     }
 
-    public byte returnNewByte(byte x) {
-        x = (byte) (x * 2);
-        return x;
+    public byte returnNewByte(byte varByte) {
+        varByte = (byte) (varByte * 2);
+        return varByte;
     }
 
-    public boolean returnNewBoolean(Boolean x) {
-        return !x;
+    public boolean returnNewBoolean(Boolean varBoolean) {
+        return !varBoolean;
     }
 
 }
