@@ -1,6 +1,6 @@
 package project.liquid;
 
-import project.Bubbles.Bubble;
+import project.bubbles.Bubble;
 
 public class SparklingWater extends Water {
 
