@@ -1,4 +1,6 @@
-package bubbles;
+package project.liquid;
+
+import project.Bubbles.Bubble;
 
 public class SparklingWater extends Water {
 
@@ -30,5 +32,29 @@ public class SparklingWater extends Water {
             bubbles[i].cramp();
             bubbles[i] = null;
         }
+    }
+
+    public Bubble[] getBubbles() {
+        return bubbles;
+    }
+
+    public double getBubbleAmount() {
+        return bubbleAmount;
+    }
+
+    public String getNeededBubbleGas() {
+        return neededBubbleGas;
+    }
+
+    public void setBubbles(Bubble[] bubbles) {
+        this.bubbles = bubbles;
+    }
+
+    public void setBubbleAmount(double bubbleAmount) {
+        this.bubbleAmount = bubbleAmount;
+    }
+
+    public void setNeededBubbleGas(String neededBubbleGas) {
+        this.neededBubbleGas = neededBubbleGas;
     }
 }
