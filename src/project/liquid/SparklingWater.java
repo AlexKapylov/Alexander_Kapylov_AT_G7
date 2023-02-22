@@ -5,32 +5,32 @@ import project.bubbles.Bubble;
 public class SparklingWater extends Water {
 
     private Bubble[] bubbles;
-    private double bubbleAmount;
-    private String neededBubbleGas;
+    private boolean isOpened;
+    public Bubble[] bottleBubbles;
 
-    private double calculateBubbleAmount(double volume) {
-        return volume * 10000;
-    }
-
-    public SparklingWater(double volume, String gas) {
-        neededBubbleGas = gas;
-        bubbleAmount = this.calculateBubbleAmount(volume);
-        bubbles = new Bubble[(int) bubbleAmount];
-        this.pump(bubbles);
+    public SparklingWater() {
+        this.isOpened();
     }
 
     private void pump(Bubble[] bubbles) {
+        this.setBubbles(this.getBottleBubbles());
+        Bubble myBubble = new Bubble("bubbleGas");
         int i = 0;
         while (i < bubbles.length) {
-            bubbles[i++] = new Bubble(neededBubbleGas);
+            bubbles[i++] = myBubble;
         }
     }
 
-    public void degas() {
+    private void degas() throws InterruptedException {
         int i;
-        for (i = 0; i < bubbleAmount; i++) {
+        int j=1;
+        for (i = 0; i < bubbles.length; i++) {
             bubbles[i].cramp();
             bubbles[i] = null;
+            if((j==10+5*this.getTemperature())){
+                Thread.sleep(1000);
+            }
+            j++;
         }
     }
 
@@ -38,23 +38,43 @@ public class SparklingWater extends Water {
         return bubbles;
     }
 
-    public double getBubbleAmount() {
-        return bubbleAmount;
-    }
-
-    public String getNeededBubbleGas() {
-        return neededBubbleGas;
-    }
-
     public void setBubbles(Bubble[] bubbles) {
         this.bubbles = bubbles;
     }
 
-    public void setBubbleAmount(double bubbleAmount) {
-        this.bubbleAmount = bubbleAmount;
+    public void setOpened(boolean isOpened) {
+        this.isOpened = isOpened;
+    }
+    private void isOpened(){
+//        не понимаю как здесь запустить в отдельно потоке
+//        int i;
+//        for(i=1;i>0;i++){
+//            if(isOpened){
+//                this.degas();
+//                break;
+//            }
+//        }
     }
 
-    public void setNeededBubbleGas(String neededBubbleGas) {
-        this.neededBubbleGas = neededBubbleGas;
+    public Bubble[] getBottleBubbles() {
+        return bottleBubbles;
     }
+
+    public void setBottleBubbles(Bubble[] bubbles) {
+        this.bottleBubbles = bubbles;
+    }
+    public boolean isSparkle(){
+        boolean varSparkle;
+        int i;
+        for (i = 0; i < bubbles.length; i++) {
+            if(bubbles[i]==null){
+                continue;
+            }else{
+                varSparkle=true;
+                return varSparkle;
+            }
+
+        }
+    }
+
 }
