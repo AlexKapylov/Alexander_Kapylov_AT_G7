@@ -11,7 +11,7 @@ public class Bottle {
     public Bottle(double volume) {
         this.volume = volume;
         this.water = new SparklingWater();
-        ((SparklingWater)water).setBottleBubbles(new Bubble[(int)this.volume*10000]);
+        ((SparklingWater)water).setBubbles(new Bubble[(int)this.volume*10000]);
     }
     public void open() {
         ((SparklingWater)this.water).setOpened(true);

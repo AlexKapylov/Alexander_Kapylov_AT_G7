@@ -6,14 +6,12 @@ public class SparklingWater extends Water {
 
     private Bubble[] bubbles;
     private boolean isOpened;
-    public Bubble[] bottleBubbles;
-
     public SparklingWater() {
         this.isOpened();
     }
 
     private void pump(Bubble[] bubbles) {
-        this.setBubbles(this.getBottleBubbles());
+        this.setBubbles(this.getBubbles());
         Bubble myBubble = new Bubble("bubbleGas");
         int i = 0;
         while (i < bubbles.length) {
@@ -32,6 +30,19 @@ public class SparklingWater extends Water {
             }
             j++;
         }
+    }
+    public boolean isSparkle(){
+        boolean varSparkle=false;
+        int i;
+        for (i = 0; i < bubbles.length; i++) {
+            if(bubbles[i]==null){
+                continue;
+            }else{
+                varSparkle=true;
+                break;
+            }
+        }
+        return varSparkle;
     }
 
     public Bubble[] getBubbles() {
@@ -55,26 +66,4 @@ public class SparklingWater extends Water {
 //            }
 //        }
     }
-
-    public Bubble[] getBottleBubbles() {
-        return bottleBubbles;
-    }
-
-    public void setBottleBubbles(Bubble[] bubbles) {
-        this.bottleBubbles = bubbles;
-    }
-    public boolean isSparkle(){
-        boolean varSparkle;
-        int i;
-        for (i = 0; i < bubbles.length; i++) {
-            if(bubbles[i]==null){
-                continue;
-            }else{
-                varSparkle=true;
-                return varSparkle;
-            }
-
-        }
-    }
-
 }
