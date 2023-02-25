@@ -8,17 +8,13 @@ public class Bottle {
 
     private double volume;
     private Water water;
+
     public Bottle(double volume) {
         this.volume = volume;
         this.water = new SparklingWater();
-        ((SparklingWater)water).setBubbles(new Bubble[(int)this.volume*10000]);
+        ((SparklingWater) water).pump(new Bubble[(int) (volume * 10000)]);
     }
-    public void open() {
-        ((SparklingWater)this.water).setOpened(true);
-    }
-    public void warm(int temperature){
-        this.water.setTemperature((temperature));
-    }
+
     public double getVolume() {
         return volume;
     }
@@ -33,6 +29,14 @@ public class Bottle {
 
     public void setWater(Water water) {
         this.water = water;
+    }
+
+    public void open() throws InterruptedException {
+        ((SparklingWater) this.water).setOpened(true);
+    }
+
+    public void warm(int temperature) {
+        this.water.setTemperature((temperature));
     }
 
 }

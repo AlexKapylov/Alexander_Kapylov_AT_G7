@@ -9,10 +9,6 @@ public class Bubble {
         this.gas = gas;
     }
 
-    public void cramp() {
-        System.out.println("Cramp!");
-    }
-
     public double getVolume() {
         return volume;
     }
@@ -28,4 +24,9 @@ public class Bubble {
     public void setGas(String gas) {
         this.gas = gas;
     }
+
+    public void cramp() {
+        System.out.println("Cramp!");
+    }
+
 }
