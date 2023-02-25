@@ -19,7 +19,7 @@ public class Array {
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = random.nextInt(maxValue);
         }
-        System.out.println("Созданный массив: "+Arrays.toString(myArray));
+        System.out.println("Созданный массив: " + Arrays.toString(myArray));
         Array workObject = new Array(maxValue);
         workObject.sumItemsDivByN(myArray, 5);
         workObject.newArrayWithItemsMoreThenN(myArray, 4);
@@ -66,19 +66,21 @@ public class Array {
             return newArray;
         }
     }
-    private int sumItemsDivByMonth (int [] myArray){
+
+    private int sumItemsDivByMonth(int[] myArray) {
         LocalDate date = LocalDate.now();
         int month = date.getMonthValue();
         int sum = 0;
-        for(int i=0;i<myArray.length;i++){
-            if(myArray[i]%month==0){
-                sum +=myArray[i];
+        for (int i = 0; i < myArray.length; i++) {
+            if (myArray[i] % month == 0) {
+                sum += myArray[i];
             }
         }
-        System.out.println("Сумма элементов массива, кратных текущему месяцу ("+month+") равна "+sum);
+        System.out.println("Сумма элементов массива, кратных текущему месяцу (" + month + ") равна " + sum);
         return sum;
     }
-    private void drawPicture (){
+
+    private void drawPicture() {
         System.out.println("\t  ^__^");
         System.out.println("\t  (oo)\\\\_______");
         System.out.println("\t (__)\\ ) \\/\\  \\");
