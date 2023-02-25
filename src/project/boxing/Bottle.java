@@ -1,35 +1,38 @@
 package project.boxing;
 
+import project.bubbles.Bubble;
 import project.liquid.SparklingWater;
+import project.liquid.Water;
 
 public class Bottle {
 
-    private double bottleVolume;
-    private SparklingWater bottleWater;
-
+    private double volume;
+    private Water water;
+    public Bottle(double volume) {
+        this.volume = volume;
+        this.water = new SparklingWater();
+        ((SparklingWater)water).setBubbles(new Bubble[(int)this.volume*10000]);
+    }
     public void open() {
-        bottleWater.degas();
+        ((SparklingWater)this.water).setOpened(true);
+    }
+    public void warm(int temperature){
+        this.water.setTemperature((temperature));
+    }
+    public double getVolume() {
+        return volume;
     }
 
-
-    public Bottle(double bottleVolume, String gas) {
-        this.bottleVolume = bottleVolume;
-        this.bottleWater = new SparklingWater(bottleVolume, gas);
+    public void setVolume(double volume) {
+        this.volume = volume;
     }
 
-    public double getBottleVolume() {
-        return bottleVolume;
+    public Water getWater() {
+        return water;
     }
 
-    public SparklingWater getBottleWater() {
-        return bottleWater;
+    public void setWater(Water water) {
+        this.water = water;
     }
 
-    public void setBottleVolume(double bottleVolume) {
-        this.bottleVolume = bottleVolume;
-    }
-
-    public void setBottleWater(SparklingWater bottleWater) {
-        this.bottleWater = bottleWater;
-    }
 }

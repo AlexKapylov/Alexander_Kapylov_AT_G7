@@ -2,10 +2,10 @@ package project.liquid;
 
 public abstract class Water {
 
-    private String color;
-    private String transparency;
-    private String smell;
-    private double temperature;
+    private String color = "no";
+    private String transparency = "transparent";
+    private String smell = "no";
+    private int temperature = 0;
 
     public String getColor() {
         return color;
@@ -19,7 +19,7 @@ public abstract class Water {
         return smell;
     }
 
-    public double getTemperature() {
+    public int getTemperature() {
         return temperature;
     }
 
@@ -35,7 +35,7 @@ public abstract class Water {
         this.smell = smell;
     }
 
-    public void setTemperature(double temperature) {
+    public void setTemperature(int temperature) {
         this.temperature = temperature;
     }
 }
