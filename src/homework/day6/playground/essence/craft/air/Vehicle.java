@@ -1,8 +1,10 @@
 package homework.day6.playground.essence.craft.air;
 
+import homework.day6.playground.essence.Flyable;
 import homework.day6.playground.essence.Matter;
+import homework.day6.playground.essence.craft.Transportable;
 
-public abstract class Vehicle extends Matter {
+public abstract class Vehicle extends Matter implements Flyable, Transportable {
 
     protected String name;
 

@@ -1,6 +1,8 @@
 package homework.day6.playground.essence.creatures;
 
-public class Fly extends Insect {
+import homework.day6.playground.essence.Flyable;
+
+public class Fly extends Insect implements Flyable {
 
     public Fly(int mass, String name) {
         super(mass, name);

@@ -1,6 +1,6 @@
 package homework.day6.playground.essence.material;
 
-public class Water implements Pourable {
+public interface Powerable {
 
 
 
