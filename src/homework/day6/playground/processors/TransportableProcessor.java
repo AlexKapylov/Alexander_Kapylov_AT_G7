@@ -11,7 +11,7 @@ public class TransportableProcessor {
 
     public void runTransportable(Transportable transportable, int pointA, int pointB) {
         int returnMove = transportable.move(pointA, pointB);
-        System.out.printf("Transportable %s was moved to %s points", transportable.getClass().getSimpleName(), returnMove).println("");
+        System.out.printf("Transportable %s was moved to %s points", transportable.getClass().getSimpleName(), returnMove).println();
     }
 
 }
