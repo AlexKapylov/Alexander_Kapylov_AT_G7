@@ -6,4 +6,11 @@ public class Crocodile extends Vertebrata implements Crawlable {
         super(mass, name);
     }
 
+    @Override
+    public void crawl(String direction, int distance) {
+        System.out.printf("I am %s, my name is %s and I am crawling to %s for %s units",
+                this.getClass().getSimpleName(), this.name, direction, distance).println();
+        System.out.println("wr-wr-wrr-r..");
+    }
+
 }
