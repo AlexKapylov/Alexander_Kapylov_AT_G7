@@ -1,7 +1,5 @@
 package homework.day6.string_task;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Date;
 
 public class CurrentDate {

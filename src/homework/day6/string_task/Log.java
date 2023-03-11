@@ -1,9 +1,5 @@
 package homework.day6.string_task;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Log {
 
     public static void printLogsReport(String logs) {
