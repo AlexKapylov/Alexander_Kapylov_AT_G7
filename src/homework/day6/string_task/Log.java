@@ -1,5 +1,6 @@
 package homework.day6.string_task;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,37 +8,38 @@ public class Log {
 
     public static void printLogsReport(String logs) {
         String[] logsArray = logs.split("\n");
-        Map<String, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < logsArray.length; i++) {
             logsArray[i] = logsArray[i].substring(22);
         }
-        for (int i = 0; i < logsArray.length; i++) {
-            Integer count = hashMap.get(logsArray[i]);
-            hashMap.put(logsArray[i], count == null ? 1 : count + 1);
-        }
-        String[][] mainArray = new String[hashMap.size()][3];
-        int n = 0;
-        for (Map.Entry entry : hashMap.entrySet()) {
-            mainArray[n][0] = entry.getKey().toString().substring(0, 13);
-            mainArray[n][1] = entry.getKey().toString().substring(14);
-            mainArray[n][2] = entry.getValue().toString();
-            n++;
-        }
-        for (int i = 0; i < mainArray.length; i++) {
-            String iP = (mainArray[i][0]);
-            String oK = "0";
-            String failed = "0";
-            if (i != 0 && iP.equals(mainArray[i - 1][0])) {
-                continue;
+
+        String[][] mainArray = new String[logsArray.length][3];
+        for (String[] item : mainArray) {
+            for (int i = 0; i < 3; i++) {
+                item[i] = "0";
             }
-            for (int j = 0; j < mainArray.length; j++) {
-                if (iP.equals(mainArray[j][0]) && mainArray[j][1].equals("granted")) {
-                    oK = mainArray[j][2];
-                } else if (iP.equals(mainArray[j][0]) && mainArray[j][1].equals("denied")) {
-                    failed = mainArray[j][2];
+        }
+
+        for (String log : logsArray) {
+            String[] ipArray = log.split(" ");
+            for (String[] item : mainArray) {
+                if (ipArray[0].equals(item[0]) || item[0].equals("0")) {
+                    if (item[0].equals("0")) {
+                        item[0] = ipArray[0];
+                    }
+                    if (ipArray[1].equals("granted")) {
+                        item[1] = String.valueOf(Integer.valueOf(item[1]) + 1);
+                    } else {
+                        item[2] = String.valueOf(Integer.valueOf(item[2]) + 1);
+                    }
+                    break;
                 }
             }
-            System.out.printf("ip %s: ok - %s, failed - %s", iP, oK, failed).println();
+        }
+        for (int i = 0; i < mainArray.length; i++) {
+            if (mainArray[i][0].equals("0")) {
+                continue;
+            }
+            System.out.printf("ip %s: ok - %s, failed - %s", mainArray[i][0], mainArray[i][1], mainArray[i][2]).println();
         }
     }
 
