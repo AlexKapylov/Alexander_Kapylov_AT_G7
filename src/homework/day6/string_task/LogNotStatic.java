@@ -1,8 +1,5 @@
 package homework.day6.string_task;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class LogNotStatic {
 
     public void printLogsReport(String logs) {
