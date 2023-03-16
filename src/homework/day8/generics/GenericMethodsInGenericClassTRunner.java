@@ -60,7 +60,7 @@ public class GenericMethodsInGenericClassTRunner {
 
         Aircraft objectAircraft = new Aircraft(1, "myAircraft") {
         };
-        Copter ojectCopter = new Copter(1, "myCopter");
+        Copter objectCopter = new Copter(1, "myCopter");
         Plane objectPlane = new Plane(1, "myPlane");
         Rocket objectRocket = new Rocket(1, "myRocket");
         Car objectCar = new Car(1, "myCar");
@@ -142,9 +142,9 @@ public class GenericMethodsInGenericClassTRunner {
         myAircraft.genericMethodOneGenArg(objectAircraft);
         System.out.println(myAircraft.genericMethodTwoGenArgs(objectAircraft, objectAircraft));
         myAircraft.genericMethodHalfGenArgs(objectAircraft, "myAircraft");
-        myCopter.genericMethodOneGenArg(ojectCopter);
-        System.out.println(myCopter.genericMethodTwoGenArgs(ojectCopter, ojectCopter));
-        myCopter.genericMethodHalfGenArgs(ojectCopter, "myCopter");
+        myCopter.genericMethodOneGenArg(objectCopter);
+        System.out.println(myCopter.genericMethodTwoGenArgs(objectCopter, objectCopter));
+        myCopter.genericMethodHalfGenArgs(objectCopter, "myCopter");
         myPlane.genericMethodOneGenArg(objectPlane);
         System.out.println(myPlane.genericMethodTwoGenArgs(objectPlane, objectPlane));
         myPlane.genericMethodHalfGenArgs(objectPlane, "myPlane");
