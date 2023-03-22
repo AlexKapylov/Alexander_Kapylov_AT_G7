@@ -33,11 +33,7 @@ public class MyBirds {
             System.out.printf("%s ", birds.get(i));
         }
         System.out.println();
-        try {
-            birds.set(2, "Синица");
-        } catch (UnsupportedOperationException e) {
-            System.out.println("UnsupportedOperationException\nЗапрошенная операция не поддерживается");
-        }
+        birds.set(2, "Синица");
         System.out.println("-------------");
         for (String item : birds) {
             System.out.printf("%s ", item);
