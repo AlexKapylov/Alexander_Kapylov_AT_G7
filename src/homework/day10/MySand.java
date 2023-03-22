@@ -29,13 +29,13 @@ public class MySand {
         for (int i = 0; i < sandbox.size(); i++) {
             myMap.put(i, sandbox.get(i));
         }
-        for (int item : myMap.keySet()) {
-            System.out.printf("%s ", item);
+        for (Map.Entry<Integer, Sand> item : myMap.entrySet()) {
+            System.out.printf("%s ", item.getKey());
         }
         System.out.println();
         System.out.println("-------------");
-        for (Sand item : myMap.values()) {
-            System.out.println(item);
+        for (Map.Entry<Integer, Sand> item : myMap.entrySet()) {
+            System.out.println(item.getValue());
         }
         System.out.println("-------------");
         for (Map.Entry<Integer, Sand> item : myMap.entrySet()) {
