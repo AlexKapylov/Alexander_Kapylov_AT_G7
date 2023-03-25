@@ -8,5 +8,6 @@ public class Runner {
         classwork.day11.task2.MyClass mc = new MyClass();
         mc.justMethod(s -> System.out.println(s));
     }
+
 }
 
