@@ -15,7 +15,6 @@ public class MyFigures {
             for (String item : figures) {
                 bw.write("- " + item + " ");
             }
-            bw.close();
         } catch (IOException e) {
             System.out.println("IOException\nНеудачная или прерванная операция записи");
         }

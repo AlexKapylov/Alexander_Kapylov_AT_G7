@@ -22,7 +22,6 @@ public class MyCars {
             for (String item : cars) {
                 bw.write("- \"" + item + "\"\n");
             }
-            bw.close();
         } catch (IOException e) {
             System.out.println("IOException\nНеудачная или прерванная операция записи");
         }
