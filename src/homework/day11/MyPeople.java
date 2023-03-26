@@ -22,8 +22,8 @@ public class MyPeople {
         }
         System.out.printf("Потенциально работоспособные люди: %s (Без использования Stream API)", counter).println();
         System.out.printf("Потенциально работоспособные люди: %s (С использованием Stream API)",
-                people.stream().filter(item -> item.age > 17 && item.age < 56 && item.sex == Person.Sex.WOMAN
-                        || item.age > 17 && item.age < 61 && item.sex == Person.Sex.MAN).count());
+                people.stream().filter(item -> item.age > 17 && item.age < 56 && item.sex.equals(Person.Sex.WOMAN)
+                        || item.age > 17 && item.age < 61 && item.sex.equals(Person.Sex.MAN)).count());
 
     }
 
