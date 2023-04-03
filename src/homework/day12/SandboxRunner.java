@@ -25,7 +25,7 @@ public class SandboxRunner {
             for (Map.Entry<Integer, String> item : sandbox.stream().filter(s -> s.getWeight() > 9 && s.getName().contains("ч")).sorted(Comparator.comparing(Sand::getWeight)).map(s -> {
                 return new Sand(s.getWeight() * 2, s.getName().toUpperCase());
             }).collect(Collectors.toMap(Sand::getWeight, Sand::getName)).entrySet()) {
-                bw.write(item.getKey() + ":" + item.getValue() + "\n");
+                bw.write(item.getValue() + ":" + item.getKey() + "\n");
             }
         } catch (IOException e) {
             System.out.println("IOException\nНеудачная или прерванная операция записи");
