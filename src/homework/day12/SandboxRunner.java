@@ -1,6 +1,5 @@
 package homework.day12;
 
-import homework.day10.objects.Person;
 import homework.day10.objects.Sand;
 
 import java.io.BufferedWriter;
